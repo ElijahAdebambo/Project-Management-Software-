@@ -1,0 +1,32 @@
+<?php
+// Include database connection
+include 'connection.php';
+
+header('Content-Type: application/json'); // Set correct content type
+
+if(isset($_GET['developerId'])) {
+    $developerId = $_GET['developerId']; // Directly get the developerId
+
+    // Prepared statement for better security
+    $stmt = $con->prepare("SELECT
+                             (SELECT COUNT(*) FROM tasks WHERE developer_id = ? AND status = 'Completed') AS completedTasks,
+                             (SELECT COUNT(*) FROM tasks WHERE developer_id = ? AND status != 'Completed') AS uncompletedTasks");
+    $stmt->bind_param("ii", $developerId, $developerId); // Bind the developerId to the query
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $data = $result->fetch_assoc();
+
+    if ($data) {
+        echo json_encode($data); // Output the data as JSON
+    } else {
+        echo json_encode(['error' => 'No data found for the specified developer.']); // Error handling
+    }
+
+    $stmt->close(); // Close the statement
+    $con->close(); // Close the database connection
+} else {
+    echo json_encode(['error' => 'Developer ID not provided.']); // Error handling for no developerId
+}
+?>
+
+<iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=Europe%2FDublin&src=ZWxpamFoYWRlYmFtYm8xMkBnbWFpbC5jb20&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4udWsjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%237986CB&color=%2333B679&color=%230B8043" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>

@@ -1,0 +1,78 @@
+Existing Software comparison
+
+
+summary 
+- a lot of these apps don't have a dashboard page - Project dashboard features allow you to visualize the progress of each project task. As team members track time spent on each task, you’ll see an overview of how much work has been done on each part of the project. This way you know if you’re ahead of schedule (or behind) and can adjust deadlines, time allocations, and resources accordingly
+
+
+features to add
+
+- customizable dashboards and data views
+
+- Resource Allocation Optimization: Optimize resource allocation by considering team availability, skillsets, and project priorities to avoid overallocation or underutilization.
+
+- can allocate a set amount of time to each developer at the start of sprint/ sdlc, they also have emergency hours as a failsafe if work item needs more time than planned, if they complete all tasks early they can start working on next sprint 
+
+- Improve reporting capabilities with advanced data visualization options, customizable reports, and automated report generation.
+
+-Document Collaboration and Version Control - if enough time
+
+-Agile and Scrum Integration -Seamlessly integrate agile and Scrum methodologies into the software with features like backlog management, 
+
+__
+
+  Trello 
+
+pros 
+
+ - ability to label tasks w/ colours - each colour is assigned for a different function/team   !!
+ - The project Resources section allows to storing of existing work
+ - software is sectioned well which allows users to navigate through the site easily
+ - uses automation e.g. when a card/ work item is complete, emails all members on the item telling them the item complete
+
+cons
+
+ - no software PM specifically
+ - unable to collaboratively on work items w/ other members (not the best for software development PM )
+ - restricted customisation options  	!!
+
+__
+
+
+  Microsoft Planner
+
+pros
+ 
+- ability to set priority of tasks
+- ability to collaboratively work on items
+- project calendar view lets you set deadlines how you want
+
+cons 
+- no risk management feature e.g. if task exceeds cycle time   !!
+- no dashboards, if you want to show stakeholders' performance  !!
+
+
+__
+
+   Monday
+
+pros
+
+- multiple view layouts - great feature
+- live chat support feature - integrate live chat into this	!!
+- integrates a wide range of apps
+
+cons 
+
+- no Gantt chart view options
+- also no dashboard area showing overall progress 	!!
+- no custom labels
+
+
+__
+
+Microsoft azure
+
+-Document Collaboration and Version Control
+-Agile and Scrum Integration:
+Seamlessly integrate agile and Scrum methodologies into the software with features like backlog management, 
